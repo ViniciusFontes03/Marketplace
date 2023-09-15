@@ -1,0 +1,44 @@
+#{extends 'main.html' /}
+#{set title: 'Cadastro de Produtos'/}
+<div class="container p-3"> 
+	<h2>Cadastro de Produtos</h2>
+</div>
+
+<div class="container col-5 p-4">
+	<form action="@{Produtos.salvar}" method="POST">
+
+		<input type="hidden" name="p.id" class="form-control" value="${p?.id}">
+
+		<div class="mb-3">
+			<label class="form-label">Nome do Produto:</label>
+			<input type="text" name="p.nome" class="form-control" value="${p?.nome}">
+		</div>
+
+		<div class="mb-3">
+			<label class="form-label">Descrição do Produto:</label>
+			<input class="form-control" name="p.desc" value="${p?.desc}"></input>
+		</div>
+
+		<div class="mb-3">
+			<label class="form-label">Valor do Produto:</label>
+			<input type="number" class="form-control" name="p.valor" value="${p?.valor}"></input>
+		</div>
+		
+				
+					<div class="mb-3">
+						<label class="form-label">Loja:</label>
+						<select name="idLoja" class="form-select" aria-label="Default select example">
+							<option></option>
+			
+							#{list items:listaLojas, as: 'loja'}
+								<option value="${loja.id}">${loja.nomeLoja}</option>
+							#{/list}
+							
+						</select>
+					</div>
+
+		<div class="container p-3 d-flex justify-content-center ">	
+		<input class="btn btn-dark col-2 " type="submit" />
+		</div>
+	</form>
+</div>
