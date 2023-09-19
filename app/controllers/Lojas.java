@@ -28,21 +28,18 @@ public class Lojas extends Controller {
 		home();
 	}
 	public static void deletar(Long id) {
-		System.out.println(id);
-		Produto p = Produto.findById(id);
-		if( p != null) {
-			p.delete();
+		Loja loja = Loja.findById(id);
+		if(loja != null) {
+			loja.delete();
 			
 			flash.success("A pessoa foi removida com sucesso.");
-		}else {
-			
 		}
 		
 		listar();
 	}
 	public static void editar(Long id) {
-		Loja loja = Loja.findById(id);	
+		Loja loj = Loja.findById(id);	
 		
-		renderTemplate("Loja/form.html", loja);
+		renderTemplate("Lojas/form.html", loj);
 	}
 }
