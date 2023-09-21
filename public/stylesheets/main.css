@@ -1,11 +1,14 @@
 .color1{
-	background-color: #70160e;
+	background-color: #27476E;
+	
 }
 
-.colorBase { #e1e3db };
+.colorBase { 
+	background-color: #F4EDE5; 
+};
 
 .color2{
-	background-color: #b9030f;
+	color: #ECA400;
 }
 
 .color3{
@@ -13,5 +16,12 @@
 }
 
 .menu-color{
-	color:   #b9030f;
+	color:   #ECA400;
 }
+
+.logo{
+	display: flex;
+	width: 50px;
+	align-items: center;
+}
+
