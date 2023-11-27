@@ -14,4 +14,9 @@ server.pid
 /dist/
 .cache
 eclipse
-/eclipse
+eclipse/*
+.classpath
+.project
+.settings/*
+tmp
+tmp/*
